@@ -101,6 +101,18 @@ Then in a file you want an ENV variable to be replaced, use something like this
     alert(version);
 ```
 
+Which will produce
+```html
+    <head>
+        <title>AppDev</title>
+    </head>
+    <script src="http://localhost:8000/user/create">
+```
+
+```js
+    var version = "0.1.0";
+    alert(version);
+```
 
 ## Release History
 0.1.0 - Initial release. Functionality is working. Not tested.
