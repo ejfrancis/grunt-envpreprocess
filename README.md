@@ -69,7 +69,7 @@ Which environment to use when retrieving ENV variables from the .json file. If g
 
 
 
-#### Example Usage
+### Example Usage
 Environment variables are defined in the config file located at the specified 'files.src' file. For each variable you must define a value for each environment, or use "*" to apply it to any environments that don't have a value specified. This is an example of such file
 ```json
 {
