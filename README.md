@@ -28,7 +28,7 @@ grunt.initConfig({
    envpreprocess:{
         dev:{
             files:{
-                
+                src:  'config/env.json'
             },
             options:{
                 replacePath: ['dev_build/**/*.*'],
@@ -37,7 +37,7 @@ grunt.initConfig({
         },
         prod:{
             files:{
-                src:  'config/env.json',
+                src:  'config/env.json'
             },
             options:{
                 replacePath: ['dist_build/**/*.*'],
