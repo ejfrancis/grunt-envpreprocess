@@ -1,0 +1,42 @@
+{
+  "name": "grunt-envpreprocess",
+  "description": "preprocess environment variables",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ejfrancis/grunt-envpreprocess",
+  "author": {
+    "name": "Evan Francis"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ejfrancis/grunt-envpreprocess.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfrancis/grunt-envpreprocess/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Evan/grunt_plugin_test/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies" : {
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
