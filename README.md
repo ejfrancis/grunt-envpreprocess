@@ -18,7 +18,7 @@ grunt.loadNpmTasks('envpreprocess');
 ```
 
 ## The "envpreprocess" task
-A task for replacing environment-specific variables in a specified file or directory. Environment variables are specified in an external .json file. Text search and replacement in files is powered by the core of [grunt-text-replace](https://github.com/yoniholmes/grunt-text-replace).
+Text search and replacement in files is powered by the core of [grunt-text-replace](https://github.com/yoniholmes/grunt-text-replace).
 
 ### Overview
 In your project's Gruntfile, add a section named `envpreprocess` to the data object passed into `grunt.initConfig()`.
