@@ -94,7 +94,6 @@ Then in a file you want an ENV variable to be replaced, use something like this
         <title>ENV.APP_NAME</title>
     </head>
     <script src="ENV.API_BASE/user/create">
-     ENV.APP_VERSION
 ```
 
 ```js
