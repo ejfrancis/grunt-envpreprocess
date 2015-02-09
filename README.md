@@ -114,5 +114,9 @@ Which will produce
     alert(version);
 ```
 
+---
+
+Note that this is going to modify the files that you point it to. This means that you shouldn't point this task at your actual source files, but at a separate build folder containing a copy of the source.
+
 ## Release History
 0.1.0 - Initial release. Functionality is working. Not tested.
