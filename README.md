@@ -85,6 +85,7 @@ Environment variables are defined in the config file located at the specified 'f
         "prod": "https://www.mysite.com/api"
     }
 }
+```
 
 Then in a file you want an ENV variable to be replaced, use something like this
 
