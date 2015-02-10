@@ -70,19 +70,20 @@ Which environment to use when retrieving ENV variables from the .json file. If g
 
 ### Example Usage
 Environment variables are defined in the config file located at the specified 'files.src' file. For each variable you must define a value for each environment, or use "*" to apply it to any environments that don't have a value specified. This is an example of such file
+
 ```json
 {
-	"APP_NAME": {
+	APP_NAME": {
 		"dev": "AppDev",
 		"prod": "AppProd"
 	},
 	"APP_VERSION": {
 		"*": "0.1.0"
 	},
-    	"API_BASE": {
-	        "dev": "http://localhost:8000",
-	        "prod": "https://www.mysite.com/api"
-    	}
+	"API_BASE": {
+		"dev": "http://localhost:8000",
+		"prod": "https://www.mysite.com/api"
+	}
 }
 ```
 
