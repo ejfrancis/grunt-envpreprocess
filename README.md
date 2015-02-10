@@ -73,7 +73,7 @@ Environment variables are defined in the config file located at the specified 'f
 
 ```json
 {
-	APP_NAME": {
+	"APP_NAME": {
 		"dev": "AppDev",
 		"prod": "AppProd"
 	},
