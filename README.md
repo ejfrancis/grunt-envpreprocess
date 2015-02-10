@@ -8,18 +8,17 @@ This plugin requires Grunt `~0.4.5`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install envpreprocess --save-dev
+npm install grunt-envpreprocess --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('envpreprocess');
+grunt.loadNpmTask('grunt-envpreprocess');
 ```
 
-## The "envpreprocess" task
+## The grunt-envpreprocess task
 Text search and replacement in files is powered by the core of [grunt-text-replace](https://github.com/yoniholmes/grunt-text-replace).
-
 ### Overview
 In your project's Gruntfile, add a section named `envpreprocess` to the data object passed into `grunt.initConfig()`.
 
