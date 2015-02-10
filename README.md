@@ -50,7 +50,7 @@ When the task is run, you'll see a log output like this
 ```
 Running "envpreprocess:prod" (envpreprocess) task
 Reading ENV variables from config/env.json
-Replaced all ENV variables in dev_build/**/*.*
+Replaced all ENV variables in prod_build/**/*.*
 ```
 
 ### Options
@@ -77,12 +77,12 @@ Environment variables are defined in the config file located at the specified 'f
 		"prod": "AppProd"
 	},
 	"APP_VERSION": {
-        "*"
+		"*": "0.1.0"
 	},
-    "API_BASE": {
-        "dev": "http://localhost:8000",
-        "prod": "https://www.mysite.com/api"
-    }
+    	"API_BASE": {
+	        "dev": "http://localhost:8000",
+	        "prod": "https://www.mysite.com/api"
+    	}
 }
 ```
 
@@ -100,12 +100,27 @@ Then in a file you want an ENV variable to be replaced, use something like this
     alert(version);
 ```
 
-Which will produce
+If you  run 'grunt envpreprocess' with options.environment="dev", it will produce
+
 ```html
     <head>
         <title>AppDev</title>
     </head>
     <script src="http://localhost:8000/user/create">
+```
+
+```js
+    var version = "0.1.0";
+    alert(version);
+```
+
+Similarly, if you  run 'grunt envpreprocess' with options.environment="prod", it will produce
+
+```html
+    <head>
+        <title>AppProd</title>
+    </head>
+    <script src="https://www.mysite.com/api/user/create">
 ```
 
 ```js
