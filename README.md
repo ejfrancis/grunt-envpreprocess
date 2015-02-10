@@ -62,7 +62,7 @@ The path of files to have ENV variables replaced with the preprocessor.
 
 #### options.environment
 Type: `String`
-Default value: `dev'`
+Default value: `dev`
 
 Which environment to use when retrieving ENV variables from the .json file. If given "*", any environment that isn't specified will use that value.
 
