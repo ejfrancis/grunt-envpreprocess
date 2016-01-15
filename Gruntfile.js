@@ -20,8 +20,7 @@ module.exports = function(grunt) {
         },
         options:{
           //replace ENV variables in demo/build_output dir
-          replacePath: ['demo/build_output/**/*.*'],
-          environment: 'dev'
+          replacePath: ['demo/build_output/**/*.*']
         }
       }
     },
@@ -31,7 +30,7 @@ module.exports = function(grunt) {
         files:[
           {
             expand:true,
-            src: ['demo/**'],
+            src: ['demo/test.html'],
             dest: 'demo/build_output/'
           }
         ]
@@ -49,6 +48,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
 
-  grunt.registerTask('default', ['clean','copy:main', 'envpreprocess:dev']);
+  grunt.registerTask('default', ['clean','copy', 'envpreprocess:dev']);
 
 };
