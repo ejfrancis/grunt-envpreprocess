@@ -46,6 +46,9 @@ grunt.initConfig({
     }
 });
 ```
+(note that if you don't specify `dev.options.environment`, it will use the target, which in that case is `dev`)
+
+
 When the task is run, you'll see a log output like this
 ```
 Running "envpreprocess:prod" (envpreprocess) task
@@ -128,6 +131,12 @@ Similarly, if you  run 'grunt envpreprocess' with options.environment="prod", it
     var version = "0.1.0";
     alert(version);
 ```
+
+### Demo
+
+
+You can run a simple demo by cloning this repo and running `grunt`. In the `demo/` directory there is `test.html` and `demo/config/env.json` to demonstrate how to define environment variables and use them in HTML/JS. Running `grunt` will copy `test.html` to `demo/build_output/` and then `envpreprocess` will be run to replace the environment variables inside the build output file.
+
 
 ---
 
