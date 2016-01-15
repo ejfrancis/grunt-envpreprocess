@@ -20,7 +20,8 @@ module.exports = function(grunt) {
         },
         options:{
           //replace ENV variables in demo/build_output dir
-          replacePath: ['demo/build_output/**/*.*']
+          replacePath: ['demo/build_output/**/*.*'],
+          environment: 'dev'
         }
       }
     },
