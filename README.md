@@ -148,3 +148,5 @@ Note that this is going to modify the files that you point it to. This means tha
 0.1.1 - added demo
 
 0.1.2 - accepted PR from nicolasbd to use target as environment if not specified in options
+
+0.1.3 - fix README format
