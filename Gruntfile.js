@@ -1,8 +1,8 @@
 /*
  * envpreprocess
- * https://github.com/Evan/grunt_plugin_test
+ * https://github.com/ejfrancis/grunt-envpreprocess
  *
- * Copyright (c) 2015 evanjf
+ * Copyright (c) 2015 ejfrancis
  * Licensed under the MIT license.
  */
 
@@ -12,62 +12,43 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    jshint: {
-      all: [
-        'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>'
-      ],
-      options: {
-        jshintrc: '.jshintrc'
-      }
-    },
-
-    // Before generating any new files, remove any previously-created files.
-    clean: {
-      tests: ['tmp']
-    },
-
     // Configuration to be run (and then tested).
     envpreprocess: {
-      default_options: {
-        options: {
+      dev: {
+        files:{
+          src:  'demo/config/env.json'
         },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+        options:{
+          //replace ENV variables in demo/build_output dir
+          replacePath: ['demo/build_output/**/*.*'],
+          environment: 'dev'
         }
       }
     },
-
-    // Unit tests.
-    nodeunit: {
-      tests: ['test/*_test.js']
-    }
-
+    copy:{
+      //copy files to demo/build_output dir
+      main:{
+        files:[
+          {
+            expand:true,
+            src: ['demo/**'],
+            dest: 'demo/build_output/'
+          }
+        ]
+      }
+    },
+    //clean the demo/build_output dir
+    clean:['demo/build_output/']
   });
 
   // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  // Whenever the "test" task is run, first clean the "tmp" dir, then run this
-  // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'envpreprocess', 'nodeunit']);
 
-  // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['clean','copy:main', 'envpreprocess:dev']);
 
 };
