@@ -1,7 +1,7 @@
 {
   "name": "grunt-envpreprocess",
   "description": "A task for replacing environment-specific variables in a specified file or directory. Environment variables are specified in an external .json file.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/ejfrancis/grunt-envpreprocess",
   "author": {
     "name": "Evan Francis"
@@ -25,8 +25,7 @@
   "scripts": {
     "test": "grunt test"
   },
-  "dependencies" : {
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt-contrib-clean": "^0.5.0",
     "grunt-contrib-copy": "^0.8.2",
