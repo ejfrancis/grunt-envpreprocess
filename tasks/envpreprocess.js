@@ -28,7 +28,7 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('envpreprocess', 'preprocess environment variables', function() {      
       
     //default environment to 'dev', and grab destination
-    var environment = "dev",
+    var environment = this.target || "dev",
         dest = this.data.options.replacePath;
         //dest = this.data.files.dest;
       
