@@ -135,7 +135,7 @@ Similarly, if you  run 'grunt envpreprocess' with options.environment="prod", it
 ### Demo
 
 
-You can run a simple demo by cloning this repo and running `grunt`. In the `demo/` directory there is `test.html` and `demo/config/env.json` to demonstrate how to define environment variables and use them in HTML/JS. To run the demo, run `npm run demo`. This will copy `test.html` to `demo/build_output/` and then `envpreprocess` will be run to replace the environment variables inside the build output file.
+You can run a simple demo by cloning this repo and running `grunt`. In the `demo/` directory there is `test.html` and `demo/config/env.json` to demonstrate how to define environment variables and use them in HTML/JS. To run the demo, run `npm install && npm run demo`. This will copy `test.html` to `demo/build_output/` and then `envpreprocess` will be run to replace the environment variables inside the build output file.
 
 
 ---
