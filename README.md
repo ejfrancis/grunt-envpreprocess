@@ -14,7 +14,7 @@ npm install grunt-envpreprocess --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTask('grunt-envpreprocess');
+grunt.loadNpmTasks('grunt-envpreprocess');
 ```
 
 ## The grunt-envpreprocess task
